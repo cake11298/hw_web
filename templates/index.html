@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>國立中央大學調酒社官方網站</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="/static/assets/img/favicon.png" rel="icon">
+  <link href="/static/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="/static/assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="/static/assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="/static/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/static/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="/static/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="/static/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="/static/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="/static/assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Restaurantly
+  * Template URL: https://bootstrapmade.com/restaurantly-restaurant-template/
+  * Updated: Mar 17 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+<!-- ======= Top Bar ======= -->
+<div id="topbar" class="d-flex align-items-center fixed-top">
+  <div class="container d-flex justify-content-center justify-content-md-between">
+    <div class="contact-info d-flex align-items-center">
+      <i class="bi bi-phone d-flex align-items-center"><span>+886-98050123</span></i>
+      <i class="bi bi-clock d-flex align-items-center ms-4"><span> 每個星期四晚上7點社課</span></i>
+    </div>
+    <div class="languages d-none d-md-flex align-items-center">
+      <ul>
+        <li>{{ username if username else '访客' }}</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ======= Header ======= -->
+<header id="header" class="fixed-top d-flex align-items-center">
+  <div class="container-fluid container-xl d-flex align-items-center justify-content-lg-between">
+    <h1 class="logo me-auto me-lg-0"><a href="/">調酒社</a></h1>
+    <!-- 如果您更喜歡使用圖像標誌，取消下面的註釋 -->
+    <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/cocktail-logo.png" alt="" class="img-fluid"></a>-->
+
+    <nav id="navbar" class="navbar order-last order-lg-0">
+      <ul>
+        <li><a class="nav-link scrollto active" href="#hero">首頁</a></li>
+        <li><a class="nav-link scrollto" href="#about">我們的故事</a></li>
+        <li><a class="nav-link scrollto" href="#menu">雞尾酒菜單</a></li>
+        <li><a class="nav-link scrollto" href="#events">活動</a></li>
+        <li><a class="nav-link scrollto" href="#gallery">畫廊</a></li>
+        <li><a class="nav-link scrollto" href="#chefs">調酒師</a></li>
+        <li class="dropdown"><a href="#"><span>更多</span> <i class="bi bi-chevron-down"></i></a>
+          <ul>
+            <li><a href="/inner-page">Blog</a></li>
+          </ul>
+        </li>
+        <li><a class="nav-link scrollto" href="#contact">聯繫我們</a></li>
+        <li><a class="nav-link scrollto" href="login">登入</a></li>
+      </ul>
+      <i class="bi bi-list mobile-nav-toggle"></i>
+    </nav><!-- .navbar -->
+    <a href="https://forms.gle/TzNgkzVcBvpqByXP9" class="book-a-table-btn scrollto">加入社團</a>
+  </div>
+</header><!-- End Header -->
+
+<!-- ======= 英雄區塊 ======= -->
+<section id="hero" class="d-flex align-items-center">
+  <div class="container position-relative text-center text-lg-start" data-aos="zoom-in" data-aos-delay="100">
+    <div class="row">
+      <div class="col-lg-8">
+        <h1>歡迎來到<span>調酒社</span></h1>
+        <h2>掌握調酒藝術，享受難忘的夜晚。</h2>
+
+        <div class="btns">
+          <a href="#menu" class="btn-menu animated fadeInUp scrollto">探索雞尾酒</a>
+          <a href="https://forms.gle/TzNgkzVcBvpqByXP9" class="btn-book animated fadeInUp scrollto">加入我們社團</a>
+        </div>
+      </div>
+      <div class="col-lg-4 d-flex align-items-center justify-content-center position-relative" data-aos="zoom-in" data-aos-delay="200">
+        <!-- 建議更改：用你的調酒社介紹影片或相關雞尾酒視頻替換YouTube連結 -->
+        <a href="https://www.youtube.com/watch?v=E6vqVwGWaG8" class="glightbox play-btn"></a>
+      </div>
+    </div>
+  </div>
+</section><!-- 結束 英雄區塊 -->
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+        <div class="row">
+          <div class="col-lg-6 order-1 order-lg-2" data-aos="zoom-in" data-aos-delay="100">
+            <div class="about-img">
+              <img src="/static/assets/img/about.jpg" alt="">
+            </div>
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
+            <h3>深入調酒的藝術之旅</h3>
+            <p class="fst-italic">
+              在我們的調酒社中，每一杯調製的雞尾酒都是一場視覺和味覺的盛宴。
+            </p>
+            <ul>
+              <li><i class="bi bi-check-circle"></i> 專業調酒師的匠心獨運。</li>
+              <li><i class="bi bi-check-circle"></i> 精選優質原料，呈現最純粹的風味。</li>
+              <li><i class="bi bi-check-circle"></i> 融合傳統與創新，帶來獨特的雞尾酒體驗。</li>
+            </ul>
+            <p>
+              在分子創意飲品研究社中，
+              我們希望這個社群作為人類豐富飲料文化的載體，
+            </p>
+            <p>
+              並且致力於探索與創新，
+              不斷嘗試不同的調酒技術與烹飪技法，
+            </p>
+            <p>用最學術的方式做最感性的事情。 
+              這裡不僅是學習的平台，
+            </p>
+            <p>
+              更是一個知識分享與交流的社群，
+              我們定期舉辦工作坊、講座與互動活動，
+              讓有興趣的人一起學習成長。 
+            </p>
+          </div>
+        </div>
+      </div>
+    </section><!-- End About Section -->
+    
+    <!-- ======= Why Us Section ======= -->
+    <section id="why-us" class="why-us">
+      <div class="container" data-aos="fade-up">
+        <div class="section-title">
+          <h2>為何選擇我們</h2>
+          <p>選擇我們的調酒社的理由</p>
+        </div>
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="box" data-aos="zoom-in" data-aos-delay="100">
+              <span>01</span>
+              <h4>專業調酒</h4>
+              <p>由經驗豐富的調酒師準備，保證每一杯都是藝術品。</p>
+            </div>
+          </div>
+          <div class="col-lg-4 mt-4 mt-lg-0">
+            <div class="box" data-aos="zoom-in" data-aos-delay="200">
+              <span>02</span>
+              <h4>獨特氛圍</h4>
+              <p>舒適的環境，是與好友共度美好夜晚的最佳場所。</p>
+            </div>
+          </div>
+          <div class="col-lg-4 mt-4 mt-lg-0">
+            <div class="box" data-aos="zoom-in" data-aos-delay="300">
+              <span>03</span>
+              <h4>創意雞尾酒</h4>
+              <p>不斷創新的雞尾酒菜單，總有新口味等你來探索。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- End Why Us Section -->    
+
+    <!-- ======= Menu Section ======= -->
+<section id="menu" class="menu section-bg">
+  <div class="container" data-aos="fade-up">
+    <div class="section-title">
+      <h2>菜單</h2>
+      <p>探索我們精心調製的雞尾酒</p>
+    </div>
+    <div class="row" data-aos="fade-up" data-aos-delay="100">
+      <div class="col-lg-12 d-flex justify-content-center">
+        <ul id="menu-flters">
+          <li data-filter="*" class="filter-active">全部</li>
+          <li data-filter=".filter-classics">經典調酒</li>
+          <li data-filter=".filter-specialties">特色調酒</li>
+          <li data-filter=".filter-non-alcoholic">無酒精飲品</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row menu-container" data-aos="fade-up" data-aos-delay="200">
+      <!-- 椰林飄香 -->
+      <div class="col-lg-6 menu-item filter-classics">
+        <img src="/static/assets/img/menu/piña-colada.jpg" class="menu-img" alt="">
+        <div class="menu-content">
+          <a href="#">椰林飄香</a><span>2023年第一次社課</span>
+        </div>
+        <div class="menu-ingredients">
+          朗姆酒混合椰漿和鳳梨汁，呈現出熱帶風情的甜美口感。
+        </div>
+      </div>
+
+      <!-- 螺絲起子 -->
+      <div class="col-lg-6 menu-item filter-classics">
+        <img src="/static/assets/img/menu/screwdriver.jpg" class="menu-img" alt="">
+        <div class="menu-content">
+          <a href="#">螺絲起子</a><span>2023年第二次社課</span>
+        </div>
+        <div class="menu-ingredients">
+          伏特加混合新鮮橙汁，經典且提神。
+        </div>
+      </div>
+
+      <!-- 鹹狗 -->
+      <div class="col-lg-6 menu-item filter-classics">
+        <img src="/static/assets/img/menu/salty-dog.jpg" class="menu-img" alt="">
+        <div class="menu-content">
+          <a href="#">鹹狗</a><span>2024年第一次社課</span>
+        </div>
+        <div class="menu-ingredients">
+          伏特加或金酒搭配葡萄柚汁，邊緣沾鹽，鹹鮮與果香的完美結合。
+        </div>
+      </div>
+
+      <!-- 午夜之死 -->
+      <div class="col-lg-6 menu-item filter-specialties">
+        <img src="/static/assets/img/menu/death-in-the-afternoon.jpg" class="menu-img" alt="">
+        <div class="menu-content">
+          <a href="#">午夜之死</a><span>2024年第二次社課</span>
+        </div>
+        <div class="menu-ingredients">
+          香檳搭配少量的茴香酒，神秘而迷人。
+        </div>
+      </div>
+
+      <!-- 海明威 -->
+      <div class="col-lg-6 menu-item filter-specialties">
+        <img src="/static/assets/img/menu/hemingway-daiquiri.jpg" class="menu-img" alt="">
+        <div class="menu-content">
+          <a href="#">海明威</a><span>2024年第三次社課</span>
+        </div>
+        <div class="menu-ingredients">
+          朗姆酒基底搭配柚子和檸檬汁，清新而不失深度。
+        </div>
+      </div>
+
+      <!-- 曼哈頓 -->
+      <div class="col-lg-6 menu-item filter-specialties">
+        <img src="/static/assets/img/menu/manhattan.jpg" class="menu-img" alt="">
+        <div class="menu-content">
+          <a href="#">曼哈頓</a><span>2024年第四次社課</span>
+        </div>
+        <div class="menu-ingredients">
+          威士忌混合苦艾酒和一點點櫻桃酒，堅定而濃郁。
+        </div>
+      </div>
+
+      <!-- 老古典 -->
+      <div class="col-lg-6 menu-item filter-non-alcoholic">
+        <img src="/static/assets/img/menu/old-fashioned.jpg" class="menu-img" alt="">
+        <div class="menu-content">
+          <a href="#">老古典</a><span>2024年第五次社課</span>
+        </div>
+        <div class="menu-ingredients">
+          傳統的威士忌雞尾酒，以糖塊、苦艾酒和橙皮調製，經典中的經典。
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section><!-- 結束 菜單區塊 -->
+
+    <!-- ======= 特別推薦區塊 ======= -->
+<section id="specials" class="specials">
+  <div class="container" data-aos="fade-up">
+    <div class="section-title">
+      <h2>特別推薦</h2>
+      <p>我們的特色課程調酒</p>
+    </div>
+
+    <div class="row" data-aos="fade-up" data-aos-delay="100">
+      <div class="col-lg-3">
+        <ul class="nav nav-tabs flex-column">
+          <li class="nav-item">
+            <a class="nav-link active show" data-bs-toggle="tab" href="#tab-1">經典調酒</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="#tab-2">季節限定</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="#tab-3">創意飲品</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="#tab-4">難忘經典</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="#tab-5">無酒精選擇</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-9 mt-4 mt-lg-0">
+        <div class="tab-content">
+          <div class="tab-pane active show" id="tab-1">
+            <div class="row">
+              <div class="col-lg-8 details order-2 order-lg-1">
+                <h3>藍色夏威夷</h3>
+                <p class="fst-italic">融合了蘭姆酒、藍柑橘酒與鳳梨汁，帶來清爽的熱帶風味。</p>
+                <p>這款飲品適合炎熱夏日，絕對能讓你感受到一陣陣的清涼。</p>
+              </div>
+              <div class="col-lg-4 text-center order-1 order-lg-2">
+                <img src="/static/assets/img/specials-1.png" alt="" class="img-fluid">
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane" id="tab-2">
+            <div class="row">
+              <div class="col-lg-8 details order-2 order-lg-1">
+                <h3>龍舌蘭日出</h3>
+                <p class="fst-italic">以新鮮石柳以及濃烈的龍舌蘭，適合春季與秋季享用。</p>
+                <p>這款飲品不僅味道豐富，中美洲的風格。</p>
+              </div>
+              <div class="col-lg-4 text-center order-1 order-lg-2">
+                <img src="/static/assets/img/specials-2.png" alt="" class="img-fluid">
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane" id="tab-3">
+            <div class="row">
+              <div class="col-lg-8 details order-2 order-lg-1">
+                <h3>瑪格麗塔</h3>
+                <p class="fst-italic">經典瑪格麗塔的結合，使用蘋果木煙燻，創造出前所未有的味覺體驗。</p>
+                <p>情人節中不一樣的酸楚，屬於哀傷類型的雞尾酒。</p>
+              </div>
+              <div class="col-lg-4 text-center order-1 order-lg-2">
+                <img src="/static/assets/img/specials-3.png" alt="" class="img-fluid">
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane" id="tab-4">
+            <div class="row">
+              <div class="col-lg-8 details order-2 order-lg-1">
+                <h3>經典曼哈頓</h3>
+                <p class="fst-italic">使用高品質的威士忌與苦艾酒精心調製，是酒吧中的經典之選。</p>
+                <p>這款飲品深受許多客戶的喜愛，是晚間放鬆的最佳選擇。</p>
+              </div>
+              <div class="col-lg-4 text-center order-1 order-lg-2">
+                <img src="/static/assets/img/specials-4.png" alt="" class="img-fluid">
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane" id="tab-5">
+            <div class="row">
+              <div class="col-lg-8 details order-2 order-lg-1">
+                <h3>里約熱內盧</h3>
+                <p class="fst-italic">無酒精選擇，結合新鮮百香果與檸檬汁，甜中帶酸，非常適合夏天飲用。</p>
+                <p>清爽可口，是家庭聚會或是派對中的人氣飲品。</p>
+              </div>
+              <div class="col-lg-4 text-center order-1 order-lg-2">
+                <img src="/static/assets/img/specials-5.png" alt="" class="img-fluid">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section><!-- 結束 特別推薦區塊 -->
+
+    <!-- ======= 活動區塊 ======= -->
+<section id="events" class="events">
+  <div class="container" data-aos="fade-up">
+
+    <div class="section-title">
+      <h2>活動</h2>
+      <p>我們曾經合作舉辦的活動</p>
+    </div>
+
+    <div class="events-slider swiper" data-aos="fade-up" data-aos-delay="100">
+      <div class="swiper-wrapper">
+
+        <div class="swiper-slide">
+          <div class="row event-item">
+            <div class="col-lg-6">
+              <img src="/static/assets/img/event-birthday.jpg" class="img-fluid" alt="">
+            </div>
+            <div class="col-lg-6 pt-4 pt-lg-0 content">
+              <h3>卡卡音樂祭</h3>
+              <div class="price">
+                <p><span>2024 3/9~3/10</span></p>
+              </div>
+              <p class="fst-italic">
+                在音樂祭的擺攤活動。
+              </p>
+              <ul>
+                <li><i class="bi bi-check-circled"></i> 提供訂製的調酒攤位。</li>
+                <li><i class="bi bi-check-circled"></i> 豐富的策劃經驗以及調酒技能。</li>
+                <li><i class="bi bi-check-circled"></i> 支持無酒精與安全保障。</li>
+              </ul>
+              <p>
+                確保每一位聽團仔都能享受到難忘的音樂祭。
+              </p>
+            </div>
+          </div><!-- End event item -->
+
+        <div class="swiper-slide">
+          <div class="row event-item">
+            <div class="col-lg-6">
+              <img src="/static/assets/img/event-private.jpg" class="img-fluid" alt="">
+            </div>
+            <div class="col-lg-6 pt-4 pt-lg-0 content">
+              <h3>上岸音樂祭</h3>
+              <div class="price">
+                <p><span>2024 4/27~4/28</span></p>
+              </div>
+              <p class="fst-italic">
+                最瘋狂也最大的音樂祭活動。
+              </p>
+              <ul>
+                <li><i class="bi bi-check-circled"></i> 超強的卡司組合，讓音樂祭充滿熱血。</li>
+                <li><i class="bi bi-check-circled"></i> 超低價的調酒組合。</li>
+                <li><i class="bi bi-check-circled"></i> 攤位於活動全程營業。</li>
+              </ul>
+              <p>
+                每一個細節都是分子創意調酒社精心準備。
+              </p>
+            </div>
+          </div><!-- End event item -->
+  </section><!-- 結束 Event Section -->
+
+    
+
+    <!-- ======= Gallery Section ======= -->
+    <section id="gallery" class="gallery">
+
+      <div class="container" data-aos="fade-up">
+        <div class="section-title">
+          <h2>展示</h2>
+          <p>曾經的活動</p>
+        </div>
+      </div>
+
+      <div class="container-fluid" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row g-0">
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="/static/assets/img/gallery/gallery-1.jpg" class="gallery-lightbox" data-gall="gallery-item">
+                <img src="/static/assets/img/gallery/gallery-1.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="/static/assets/img/gallery/gallery-2.jpg" class="gallery-lightbox" data-gall="gallery-item">
+                <img src="/static/assets/img/gallery/gallery-2.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="/static/assets/img/gallery/gallery-3.jpg" class="gallery-lightbox" data-gall="gallery-item">
+                <img src="/static/assets/img/gallery/gallery-3.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="/static/assets/img/gallery/gallery-4.jpg" class="gallery-lightbox" data-gall="gallery-item">
+                <img src="/static/assets/img/gallery/gallery-4.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="/static/assets/img/gallery/gallery-5.jpg" class="gallery-lightbox" data-gall="gallery-item">
+                <img src="/static/assets/img/gallery/gallery-5.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="/static/assets/img/gallery/gallery-6.jpg" class="gallery-lightbox" data-gall="gallery-item">
+                <img src="/static/assets/img/gallery/gallery-6.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="/static/assets/img/gallery/gallery-7.jpg" class="gallery-lightbox" data-gall="gallery-item">
+                <img src="/static/assets/img/gallery/gallery-7.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="/static/assets/img/gallery/gallery-8.jpg" class="gallery-lightbox" data-gall="gallery-item">
+                <img src="/static/assets/img/gallery/gallery-8.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Gallery Section -->
+
+    <!-- ======= Chefs Section ======= -->
+    <section id="chefs" class="chefs">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>調酒師</h2>
+          <p>我們的專業調酒師</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6">
+            <div class="member" data-aos="zoom-in" data-aos-delay="100">
+              <img src="/static/assets/img/chefs/chefs-1.jpg" class="img-fluid" alt="">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4>楊智宇</h4>
+                  <span>社長首席調酒師</span>
+                </div>
+                <div class="social">
+                  <a href="https://www.facebook.com/profile.php?id=100012629161826"><i class="bi bi-facebook"></i></a>
+                  <a href="https://www.instagram.com/cake11298/"><i class="bi bi-instagram"></i></a>
+                  <a href="https://www.linkedin.com/in/%E6%99%BA%E5%AE%87-%E6%A5%8A-04562724a/"><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="member" data-aos="zoom-in" data-aos-delay="200">
+              <img src="/static/assets/img/chefs/chefs-2.jpg" class="img-fluid" alt="">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4>黃曦樂</h4>
+                  <span>副社長調酒師</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="member" data-aos="zoom-in" data-aos-delay="300">
+              <img src="/static/assets/img/chefs/chefs-3.jpg" class="img-fluid" alt="">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4>王亮崎</h4>
+                  <span>見習主廚</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Chefs Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>聯絡</h2>
+          <p>聯絡我們</p>
+          <p>國立中央大學 通訊工程學系x調酒社</p>
+        </div>
+      </div>
+
+      <div data-aos="fade-up">
+        <div class="row">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3616.9618058126525!2d121.18705128245153!3d24.96741408390054!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346823ea58682e93%3A0x42c7729df8a10ac3!2z5ZyL56uL5Lit5aSu5aSn5a246YCa6KiK5bel56iL5a2457O7!5e0!3m2!1szh-TW!2stw!4v1713607661411!5m2!1szh-TW!2stw" width="150" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>  
+        </div>
+      </div>
+
+    </section><!-- 結束 聯絡區塊 -->
+  </main><!-- End #main -->
+
+
+  <style>
+    /* Add the CSS modifications here or link to an external stylesheet */
+    .footer-info, .footer-links ul {
+      text-align: center;
+    }
+
+    .footer-info, .footer-links {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .footer-links ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-links ul li {
+      padding: 5px 0;
+    }
+
+    .social-links a {
+      margin: 0 10px;
+    }
+  </style>
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+      <div class="footer-top">
+        <div class="container">
+          <div class="row">
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe4GuxgqC0suOkWeoC7itYetWz9WVWM1HVPoRVlyIqJOhrLYQ/viewform?embedded=true" width="80%" height="300" frameborder="100" marginheight="100" marginwidth="100">載入中…</iframe>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-5 col-md-6">
+              <div class="footer-info">
+                <h3>調酒社</h3>
+                <p>
+                  國立中央大學 分子創意飲品研究社<br>
+                  桃園, 台灣<br><br>
+                  <strong>電話:</strong> +886-980890448<br>
+                  <strong>郵箱:</strong> seaton@gmail.com<br>
+                </p>
+                <div class="social-links mt-3">
+                  <a href="https://www.facebook.com/profile.php?id=61552298159560" class="facebook"><i class="bx bxl-facebook"></i></a>
+                  <a href="https://www.instagram.com/ncumibrs2024/" class="instagram"><i class="bx bxl-instagram"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-7 col-md-6 footer-links">
+              <h4>實用連結</h4>
+                <ul>
+                  <li><i class="bx bx-chevron-right"></i> <a href="index#">首頁</a></li>
+                  <li><i class="bx bx-chevron-right"></i> <a href="index#about">關於我們</a></li>
+                  <li><i class="bx bx-chevron-right"></i> <a href="index#menu">服務</a></li>
+                </ul>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="copyright">
+          &copy; 版權所有 <strong><span>調酒社</span></strong>. 保留所有權利
+        </div>
+        <div class="credits">
+          <!-- 保留頁腳中的連結 -->
+          <!-- 只有在購買了專業版後才可刪除連結 -->
+          <!-- 授權信息: https://bootstrapmade.com/license/ -->
+          <!-- 購買專業版包括工作的PHP/AJAX聯繫表單: https://bootstrapmade.com/restaurantly-restaurant-template/ -->
+          設計由 <a href="https://bootstrapmade.com/">BootstrapMade</a> 提供
+        </div>
+      </div>
+    </footer><!-- END Footer -->
+
+
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="/static/assets/vendor/aos/aos.js"></script>
+  <script src="/static/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="/static/assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="/static/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="/static/assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="/static/assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="/static/assets/js/main.js"></script>
+
+</body>
+
+</html>
