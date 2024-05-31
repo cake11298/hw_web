@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>登入 - 國立中央大學調酒社官方網站 Single Blog</title>
+  <title>國立中央大學調酒社官方網站 Single Blog</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -27,58 +27,7 @@
 
   <!-- Template Main CSS File -->
   <link href="/static/assets/css/style.css" rel="stylesheet">
-  
-  <style>
-    body {
-      display: flex;
-      flex-direction: column;
-      height: 100vh;
-      justify-content: space-between; /* Ensures footer stays at the bottom */
-    }
 
-    .login-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-top: 150px; /* Adjusts the space above the login area */
-    }
-
-    input[type="text"], input[type="password"] {
-      width: 20%; /* Half the original width */
-      padding: 12px 20px;
-      margin: 8px 0;
-      display: block; /* Center the input */
-      border: 1px solid #ccc;
-      border-radius: 24px; /* Oval-shaped inputs */
-      box-sizing: border-box;
-    }
-
-    button {
-      width: 10%; /* Match the adjusted input width */
-      background-color: #4CAF50;
-      color: white;
-      padding: 8px 10px;
-      margin: 10px;
-      border: none;
-      border-radius: 12px;
-      cursor: pointer;
-    }
-
-    button:hover {
-      opacity: 0.8;
-    }
-  </style>
-
-  <script>
-    window.onload = function() {
-        // 检查 URL 参数中是否包含 'error=true'
-        const urlParams = new URLSearchParams(window.location.search);
-        if (urlParams.get('error') === 'true') {
-            alert('用戶名或密碼輸入錯誤，請重新輸入。');
-        }
-    }
-    </script>
-    
   <!-- =======================================================
   * Template Name: Restaurantly
   * Template URL: https://bootstrapmade.com/restaurantly-restaurant-template/
@@ -99,7 +48,7 @@
       </div>
       <div class="languages d-none d-md-flex align-items-center">
         <ul>
-            <li>{{ username if username else '訪客' }}</li>
+          <li>En</li>
         </ul>
       </div>
     </div>
@@ -114,19 +63,18 @@
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
-          <li><a class="nav-link scrollto active" href="/#hero">首頁</a></li>
-          <li><a class="nav-link scrollto" href="/#about">我們的故事</a></li>
-          <li><a class="nav-link scrollto" href="/#menu">雞尾酒菜單</a></li>
-          <li><a class="nav-link scrollto" href="/#events">活動</a></li>
-          <li><a class="nav-link scrollto" href="/#gallery">畫廊</a></li>
-          <li><a class="nav-link scrollto" href="/#chefs">調酒師</a></li>
+          <li><a class="nav-link scrollto active" href="#hero">首頁</a></li>
+          <li><a class="nav-link scrollto" href="#about">我們的故事</a></li>
+          <li><a class="nav-link scrollto" href="#menu">雞尾酒菜單</a></li>
+          <li><a class="nav-link scrollto" href="#events">活動</a></li>
+          <li><a class="nav-link scrollto" href="#gallery">畫廊</a></li>
+          <li><a class="nav-link scrollto" href="#chefs">調酒師</a></li>
           <li class="dropdown"><a href="#"><span>更多</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="/inner-page">Blog</a></li>
-              <li><a href="/video">直播串流</a></li>
+              <li><a href="inner-page.html">Blog</a></li>
             </ul>
           </li>
-          <li><a class="nav-link scrollto" href="/#contact">聯繫我們</a></li>
+          <li><a class="nav-link scrollto" href="index.html#contact">聯繫我們</a></li>
           <li><a class="nav-link scrollto" href="login">登入</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
@@ -138,33 +86,35 @@
   <main id="main">
 
     <!-- ======= Blog Section ======= -->
+    <section class="breadcrumbs">
+      <div class="container">
 
-    <!-- 登入畫面 -->
-    <div class="login-container" style="padding-top: 50px; padding-bottom: 150px; text-align: center; display: flex; flex-direction: column; align-items: center;">
-        <h2>調酒社 登入頁面</h2>
-        <form action="/login" method="post" style="width: 50%; display: flex; flex-direction: column; align-items: center;">
-            <div class="form-group" style="width: 50%; margin-bottom: 10px;">
-                <label for="username"></label>
-                <input type="text" id="username" name="username" placeholder="輸入帳號" required style="width: 100%; padding: 10px; margin: 10px 0; border-radius: 20px; border: 1px solid #ccc;">
-            </div>
-            <div class="form-group" style="width: 50%; margin-bottom: 10px;">
-                <label for="password"></label>
-                <input type="password" id="password" name="password" placeholder="輸入密碼" required style="width: 100%; padding: 10px; margin: 10px 0; border-radius: 20px; border: 1px solid #ccc;">
-            </div>
-            <div class="book-a-table-btn scrollto" style="width: 30%; display: flex; justify-content: center; margin-bottom: 50px; margin-top: 20px;">
-                <button type="submit" class="book-a-table-btn scrollto" style="border: none; background: none; text-align: center; width: 100%; font-size: 100%; padding: 5px 10px;">登入</button>
-            </div>
-            <div class="book-a-table-btn scrollto" style="width: 30%; display: flex; justify-content: center;">
-                <button type="button" onclick="location.href='/register';" class="book-a-table-btn scrollto" style="border: none; background: none; text-align: center; width: 100%; font-size: 100%; padding: 5px 10px;">註冊</button>
-            </div>
-            <div class="book-a-table-btn scrollto" style="width: 30%; display: flex; justify-content: center; margin-bottom: 50px; margin-top: 50px;">
-              <a href="/logout" class="book-a-table-btn scrollto" style="border: none; background: none; text-align: center; display: block; width: 100%; font-size: 100%; padding: 5px 10px; cursor: pointer;">登出</a>
-            </div>
-        </form>
-    </div>
-    
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Blog Page</h2>
+          <ol>
+            <li><a href="index">Home</a></li>
+            <li>Blog Page</li>
+          </ol>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======= Video Stream Section ======= -->
+    <section class="video-stream">
+        <div class="container">
+        <h2>Live Stream</h2>
+        <video width="100%" height="auto" controls>
+            <source src="{{ url_for('serve_hls', filename='stream.m3u8') }}" type="application/x-mpegURL">
+            Your browser does not support the video tag.
+        </video>
+        </div>
+    </section>
+
   
   </main><!-- End #main -->
+
+
 
   <style>
     /* Add the CSS modifications here or link to an external stylesheet */
@@ -217,9 +167,9 @@
             <div class="col-lg-7 col-md-6 footer-links">
               <h4>實用連結</h4>
                 <ul>
-                  <li><i class="bx bx-chevron-right"></i> <a href="index.html#">首頁</a></li>
-                  <li><i class="bx bx-chevron-right"></i> <a href="index.html#about">關於我們</a></li>
-                  <li><i class="bx bx-chevron-right"></i> <a href="index.html#menu">服務</a></li>
+                  <li><i class="bx bx-chevron-right"></i> <a href="index#">首頁</a></li>
+                  <li><i class="bx bx-chevron-right"></i> <a href="index#about">關於我們</a></li>
+                  <li><i class="bx bx-chevron-right"></i> <a href="index#menu">服務</a></li>
                 </ul>
             </div>
             

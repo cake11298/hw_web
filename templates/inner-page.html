@@ -11,10 +11,10 @@
 
   <!-- Favicons -->
   <link href="/static/assets/img/favicon.png" rel="icon">
-  <link href="/static/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="/static/assets/img/apple-touch-icon.png" rel="stylesheet">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="/static/assets/vendor/animate.css/animate.min.css" rel="stylesheet">
@@ -141,9 +141,52 @@
     </div>
   </section>
 
-
-
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // Automatically set the date input field with the current date
+      const dateInput = document.getElementById('date');
+      const currentDate = new Date().toISOString().slice(0, 10);
+      dateInput.value = currentDate;
+    });
+    </script>
     
+    <!-- ======= Add Post Section ======= -->
+    <section id="add-post" class="add-post">
+      <div class="container" data-aos="fade-up">
+        <div class="section-title">
+          <h2>新增文章</h2>
+        </div>
+        <form action="/add-post" method="post" style="width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+          <div class="form-group" style="width: 50%; margin-bottom: 10px;">
+            <label for="title">文章標題</label>
+            <input type="text" id="title" name="title" placeholder="輸入文章標題" required style="width: 100%; padding: 10px; margin: 10px 0; border-radius: 20px; border: 1px solid #ccc;">
+          </div>
+          <div class="form-group" style="width: 50%; margin-bottom: 10px;">
+            <label for="content">內容</label>
+            <textarea id="content" name="content" placeholder="輸入內容" required rows="5" style="width: 100%; padding: 10px; margin: 10px 0; border-radius: 20px; border: 1px solid #ccc;"></textarea>
+          </div>
+          <div class="form-group" style="width: 50%; margin-bottom: 10px;">
+            <label for="date">日期</label>
+            <input type="date" id="date" name="date" required style="width: 100%; padding: 10px; margin: 10px 0; border-radius: 20px; border: 1px solid #ccc;">
+          </div>
+          <div class="form-group" style="width: 50%; margin-bottom: 10px;">
+            <label for="tag">標籤</label>
+            <select id="tag" name="tag" required style="width: 100%; padding: 10px; margin: 10px 0; border-radius: 20px; border: 1px solid #ccc;">
+              <option value="cocktail-art">調酒藝術</option>
+              <option value="mixology">調酒技巧</option>
+              <option value="recipes">酒譜分享</option>
+            </select>
+          </div>
+          <div class="text-center" style="width: 100%; margin-top: 20px;">
+            <button type="submit" class="book-a-table-btn scrollto" style="border: 2px solid #cda45e; border-radius: 20px; background: none; text-align: center; width: 15%; font-size: 100%; padding: 5px 10px;">提交文章</button>
+          </div>
+        </form>
+      </div>
+    </section>
+    <!-- End Add Post Section -->
+    
+
+
     <!-- End Blog Section -->
   </main><!-- End #main -->
 

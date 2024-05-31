@@ -1,10 +1,11 @@
-from flask import Flask, request, render_template, redirect, url_for, session, g, flash
+from flask import Flask, request, render_template, redirect, url_for, session, g, flash, send_from_directory
 import sqlite3
 import os
+import subprocess
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = os.urandom(20)
-
+HLS_FOLDER = os.path.join(os.getcwd(), 'hls')
 DATABASE = 'data.db'
 
 def get_db():
@@ -28,6 +29,21 @@ def query_db(query, args=(), one=False, commit=False):
         get_db().commit()
     cur.close()
     return (rv[0] if rv else None) if one else rv
+
+def initialize_stream():
+    if not os.path.exists(HLS_FOLDER):
+        os.makedirs(HLS_FOLDER)
+    command = [
+        'ffmpeg',
+        '-i', 'rtmp://127.0.0.1:1935/live/stream',
+        '-codec', 'copy', 
+        '-start_number', '0',
+        '-hls_time', '10', 
+        '-hls_list_size', '0', 
+        '-f', 'hls',
+        os.path.join(HLS_FOLDER, 'stream.m3u8') 
+    ]
+    subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
@@ -70,7 +86,7 @@ def get_articles():
 @app.route('/inner-page')
 def innerpage():
     username = session.get('username')
-    category = request.args.get('tag', 'all')  
+    category = request.args.get('tag', 'all')
     if category == 'all':
         query = "SELECT * FROM article"
     else:
@@ -89,10 +105,53 @@ def innerpage():
     ]
     return render_template('inner-page.html', username=username, articles=articles_data)
 
+@app.route('/add-post', methods=['POST'])
+def add_post():
+    # Get username from session, default to '訪客' if not found
+    username = session.get('username', '訪客')
+    
+    # Retrieve form data
+    title = request.form['title']
+    content = request.form['content']
+    tag = request.form['tag']
+    date = request.form['date']
+    
+    # Insert the new article into the database
+    query_db('INSERT INTO article (title, content, publisher, tag, date) VALUES (?, ?, ?, ?, ?)', 
+             [title, content, username, tag, date], commit=True)
+    
+    # Determine which articles to display based on the tag query parameter
+    category = request.args.get('tag', 'all')
+    if category == 'all':
+        query = "SELECT * FROM article"
+    else:
+        query = "SELECT * FROM article WHERE tag = ?"
+    
+    # Execute query and prepare article data for rendering
+    articles = query_db(query, [category]) if category != 'all' else query_db(query)
+    articles_data = [
+        {
+            "title": article['title'],
+            "content": article['content'],
+            "publisher": article['publisher'],
+            "tag": article['tag'],
+            "date": article['date'],
+            "link": "blog-article.html"
+        } for article in articles
+    ]
+    
+    # Render the page with articles and the username
+    return render_template('inner-page.html', username=username, articles=articles_data)
+
+@app.route('/hls/<path:filename>')
+def serve_hls(filename):
+    return send_from_directory(HLS_FOLDER, filename)
+
 @app.route('/')
 def index():
     username = session.get('username')
     return render_template('index.html', username=username if username else '訪客')
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    initialize_stream()
+    app.run(port=6011)
